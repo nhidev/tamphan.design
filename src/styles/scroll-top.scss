@@ -1,0 +1,42 @@
+@import 'variables';
+
+.scroll-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;
+  color: $white;
+  z-index: 999;
+  cursor: pointer;
+  .svg.svg-icon-arrow-next {
+    position: absolute;
+    bottom: 1.5rem;
+    right: -1rem;
+    width: 2.5rem;
+    fill: $white;
+    -webkit-transform: rotateZ(-90deg);
+    transform: rotateZ(-90deg);
+    -webkit-transform-origin: 3px 0;
+    transform-origin: 3px 0;
+    transition: fill 0.1s ease,margin-bottom 0.2s cubic-bezier(.645,.045,.355,1);
+  }
+  .to-top {
+    -webkit-transform: rotateZ(-90deg);
+    transform: rotateZ(-90deg);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    transition: color 0.1s ease;
+    font-family: "Baksheesh Regular";
+    font-size: .7rem;
+    text-transform: uppercase;
+  }
+  &:hover .svg {
+    margin-bottom: 10px;
+    fill: $primary-color;
+  }
+  &:hover .to-top {
+    color: $primary-color;
+  }
+  .hide {
+    display: none;
+  }
+}

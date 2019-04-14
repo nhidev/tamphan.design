@@ -1,0 +1,30 @@
+[
+  {
+    "name": "TravelPass",
+    "type": "front-end",
+    "description": "Agency website using Wordpress CMS.",
+    "img": "image--012.jpg",
+    "url": "https://travelpass.vn"
+  },
+  {
+    "name": "ThapKim",
+    "type": "front-end",
+    "description": "Corporation website using on Wordpress CMS",
+    "img": "image--013.jpg",
+    "url": "http://thapkim.com/en/"
+  },
+  {
+    "name": "Jevith",
+    "type": "front-end",
+    "description": "B2B website using Aesir Ecommerce and Joomla CMS.",
+    "img": "image--014.jpg",
+    "url": "http://www.jevith.dk"
+  },
+  {
+    "name": "EAST Electricity",
+    "type": "front-end",
+    "description": "Multiple language website using Joomla CMS.",
+    "img": "image--015.jpg",
+    "url": "http://east-engineering.net"
+  }
+]

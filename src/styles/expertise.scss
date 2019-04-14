@@ -1,0 +1,29 @@
+@import 'breakpoints';
+@import 'variables';
+
+.expertise-list {
+  background: $yellow;
+  -webkit-clip-path: polygon(0 0, 70% 5%, 100% 0, 100% 100%, 30% 95%, 0 100%);
+  clip-path: polygon(0 0, 70% 5%, 100% 0, 100% 100%, 30% 95%, 0 100%); 
+padding: 6rem 0;
+  .expertise-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      padding: 4rem 0;
+      .expertise {
+          min-width: 22%;
+          padding: 2rem;
+          .expertise__image {
+              width: 100px;
+              height: 100px;
+              object-fit: contain;
+          }
+          .expertise__title {}
+      }
+  }
+  @include breakpoint-small-down {}
+
+}

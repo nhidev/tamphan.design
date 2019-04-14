@@ -1,0 +1,34 @@
+[
+    {
+      "name": "Photoshop",
+      "img": "image--007.jpg"
+    },
+    {
+      "name": "Illustrator",
+      "img": "image--008.jpg"
+    },
+    {
+      "name": "Indesign",
+      "img": "image--009.jpg"
+    },
+    {
+      "name": "Dreamweaver",
+      "img": "image--009.jpg"
+    },
+    {
+        "name": "Premiere",
+        "img": "image--007.jpg"
+      },
+      {
+        "name": "XD",
+        "img": "image--008.jpg"
+      },
+      {
+        "name": "Sketch",
+        "img": "image--009.jpg"
+      },
+      {
+        "name": "Invision",
+        "img": "image--009.jpg"
+      }
+  ]

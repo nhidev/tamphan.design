@@ -1,0 +1,78 @@
+@import 'breakpoints';
+@import 'variables';
+
+.about-page {
+  background: $white;
+  min-height: 100vh;
+  display: flex;
+	flex: 0 1 auto;
+	flex-direction: column;
+  justify-content: center;
+  
+  @include breakpoint-small-down {
+    padding-top: 3rem;
+  }
+
+  h1 {
+    padding: 1rem 0;
+    font-size: 3rem;
+  }
+
+  .content-grid {
+    flex: auto;
+  }
+
+  .about-wrapper {
+    
+    .about-content {
+      font-size: 0.875rem;
+      line-height: 1.5rem;
+      
+      @include breakpoint-small-down {
+        font-size: 1rem;
+      }
+
+      p {
+        font-weight: 300;
+        padding: 0.5rem 0;
+      }
+      .highlight {
+        font-weight: bold;
+      }
+      .text-emoji {
+        padding: 2rem 0;
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-align: center;
+      }
+    }
+    .education-content {
+      font-size: 0.875rem;
+      line-height: 1.5rem;
+    }
+    .experience-content {
+      font-size: 0.875rem;
+      line-height: 1.5rem;
+      .experience-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        padding: 4rem 0;
+        .experience {
+            min-width: 22%;
+            padding: 2rem;
+            .experience__image {
+                width: 100px;
+                height: 100px;
+                object-fit: contain;
+            }
+            .experience__title {}
+        }
+    }
+  
+    }
+  }
+
+}

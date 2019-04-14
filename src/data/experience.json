@@ -1,0 +1,34 @@
+[
+    {
+        "key": "1",
+        "company": "GIA KIEN MOBILE CO., LTD",
+        "year": "2010-2011",
+        "position": "Graphic Design & SEO",
+        "img": "image-001.jpg",
+        "url": "/"
+    },
+    {
+        "key": "2",
+        "company": "RECESS CO., LTD",
+        "year": "2012",
+        "position": "Photo Retouching Intern Graphic",
+        "img": "image-002.jpg",
+        "url": "/"
+    },
+    {
+        "key": "3",
+        "company": "LE BAO MINH JSC",
+        "year": "2013-2016",
+        "position": "UI/UX Design Graphic",
+        "img": "image-003.jpg",
+        "url": "/"
+    },
+    {
+        "key": "4",
+        "company": "NAM PHUONG CO., LTD",
+        "year": "2013-2016",
+        "position": " UI/UX Design",
+        "img": "image-003.jpg",
+        "url": "/"
+    }
+]

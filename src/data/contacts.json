@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Github",
+    "icon": "github",
+    "type": "social-media",
+    "url": "https://github.com/nhidev"
+  },
+  {
+    "name": "Codepen",
+    "icon": "codepen",
+    "type": "social-media",
+    "url": "https://codepen.io/nhithai"
+  },
+  {
+    "name": "Linkedin",
+    "icon": "linkedin",
+    "type": "social-media",
+    "url": "https://www.linkedin.com/in/nhi-thai"
+  }
+]
