@@ -79,6 +79,17 @@ h1 {
 	margin: 0 auto;
 	width: calc(100% - 5rem); // mobile
 
+	h3 {
+		span {
+			display: block;
+			text-decoration: underline;
+			font-size: 0.85rem;
+			line-height: 0.5rem;
+		}
+		margin: 1rem 0;
+		text-transform: uppercase;
+	}
+
 	@include breakpoint-medium-up {
 		width: calc(100% - 5rem);
 	}

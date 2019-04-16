@@ -10,23 +10,18 @@ class Projects extends Component {
     return (
       <section id="projects" className="projects">
         <div className="content-grid">
-        <h1>Portfolio</h1>  
+          <h3><span>05</span>LATEST PROJECTS</h3>
           <div className="project-wrapper">
             {projectList.map(project => {
-                 const image = projectImgs.find(n => {
-                    return n.node.relativePath === `projects/${project.img}`;
-                  });
-                  const imageSizes = image.node.childImageSharp.sizes;
-                  
+              const image = projectImgs.find(n => {
+                return n.node.relativePath === `projects/${project.img}`;
+              });
+              const imageSizes = image.node.childImageSharp.sizes;
+
               return (
-                <div className="project" key={project.name}>  
-                <a
-                  href={project.url}
-                  key={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                   <div className='project__image'>
+                <div className="project" key={project.name}>
+
+                  <div className='project__image'>
                     <Img
                       title={project.name}
                       alt="Screenshot of Project"
@@ -36,14 +31,20 @@ class Projects extends Component {
                   </div>
                   <div className='project__details'>
                     <div className='project__title'>
-                        {project.name}
+                      {project.name}
+                    </div>
+                    <div className='project__link'>
+                      <a
+                        href={project.url}
+                        key={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >{project.url}</a>
                     </div>
                     <div className='project__desc'>
-                    {project.description}
-                    </div>     
-                   </div>
-                 
-                </a>
+                      {project.description}
+                    </div>
+                  </div>
                 </div>
               );
             })}

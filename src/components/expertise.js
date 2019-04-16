@@ -9,7 +9,7 @@ class Expertise extends Component {
     return (
         <section id="expertise-list" className="expertise-list">
             <div className="content-grid">
-                <h1>Expertise</h1>
+                <h3><span>04</span>Expertise</h3>
                 <div className="expertise-wrapper">
                     {expertiseList.map(expertise => {
                         const image = expertiseImgs.find(n => {

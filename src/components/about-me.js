@@ -9,10 +9,9 @@ class  AboutMe extends Component {
     return (
       <div className="about-page" >
       <div className="content-grid">
-        <h1>About</h1>
         <div className="about-wrapper">
           <div className="about-content">
-            <h3>About me</h3>
+            <h3><span>01</span>About me</h3>
             <p>
               Hello, my name is Tam Phan. <br />
               I love everything about graphic design, user interface and user experience.<br />
@@ -23,7 +22,7 @@ class  AboutMe extends Component {
 </p>
           </div>
           <div className="education-content">
-            <h3>Education</h3>
+            <h3><span>02</span>Education</h3>
           2006 - 2009 Bachelor of Infomation Technology in Lotus University 
 
 2010 - 2012 Bachelor of Management Information System in Ho Chi Minh University of Economic
@@ -31,7 +30,7 @@ class  AboutMe extends Component {
 2010 - 2012 Certificate of Web Design in University Of Science 
           </div>
           <div className="experience-content">
-            <h3>Experience</h3>
+            <h3><span>03</span>Experience</h3>
             <div className="experience-wrapper">
             {experienceList.map(experience => {
                  const image = experienceImgs.find(n => {

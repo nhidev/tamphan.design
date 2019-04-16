@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer>
     <div className="content-grid">
-      <h3>THANKS FOR VISITING</h3>
+      <h4>THANKS FOR VISITING</h4>
       <p>© {new Date().getFullYear()} TamPhan.</p>
     </div>
   </footer>

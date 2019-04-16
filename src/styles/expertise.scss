@@ -3,9 +3,10 @@
 
 .expertise-list {
   background: $yellow;
-  -webkit-clip-path: polygon(0 0, 70% 5%, 100% 0, 100% 100%, 30% 95%, 0 100%);
-  clip-path: polygon(0 0, 70% 5%, 100% 0, 100% 100%, 30% 95%, 0 100%); 
-padding: 6rem 0;
+  -webkit-clip-path: polygon(0 0, 70% 10%, 100% 0, 100% 100%, 30% 90%, 0 100%);
+  clip-path: polygon(0 0, 70% 10%, 100% 0, 100% 100%, 30% 90%, 0 100%);
+  padding: 6rem 0;
+  
   .expertise-wrapper {
       display: flex;
       flex-direction: row;
@@ -16,14 +17,18 @@ padding: 6rem 0;
       .expertise {
           min-width: 22%;
           padding: 2rem;
+          text-align: center;
           .expertise__image {
               width: 100px;
               height: 100px;
               object-fit: contain;
+              margin: auto;
           }
           .expertise__title {}
       }
   }
-  @include breakpoint-small-down {}
+  @include breakpoint-small-down {
+    clip-path: polygon(0 0, 70% 2%, 100% 0, 100% 100%, 30% 98%, 0 100%);
+  }
 
 }

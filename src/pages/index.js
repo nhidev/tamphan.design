@@ -4,8 +4,8 @@ import AboutMe from "../components/about-me";
 import Expertise from "../components/expertise";
 import Projects from "../components/projects";
 import ScrollTop from "../components/scroll-top";
+import Contact from "../components/contact";
 import Footer from "../components/footer";
-
 import { Helmet } from "react-helmet";
 import favicon from "../images/favicon.ico";
 
@@ -35,6 +35,7 @@ const IndexPage = ({ data }) => {
       <AboutMe experienceImgs={experienceImgData}  />
       <Expertise expertiseImgs={expertiseImgData} />
       <Projects projectImgs={projectImgData} />
+      <Contact/>
       <ScrollTop />
       <Footer />
     </div>
