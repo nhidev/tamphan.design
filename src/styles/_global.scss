@@ -82,14 +82,38 @@ h1 {
 	h3 {
 		span {
 			display: block;
-			text-decoration: underline;
 			font-size: 0.85rem;
-			line-height: 0.5rem;
+			line-height: 1rem;
+			position: relative;
+			&:after {
+				content: "";
+				position: absolute;
+				width: 40px;
+				height: 1px;
+				background: black;
+				bottom: 0;
+				left: 0;
+			}
 		}
+		font-size: 1rem;
 		margin: 1rem 0;
 		text-transform: uppercase;
+		padding-left: 33%;
 	}
 
+	.flex-box {
+		display: flex;
+      flex-direction: row;
+			flex-wrap: wrap;
+			p:last-child {
+				flex: 2 0 0;
+		 }
+		 p:first-child {
+				flex: 1 0 0;
+				text-align: center;
+		 }
+					 
+	}
 	@include breakpoint-medium-up {
 		width: calc(100% - 5rem);
 	}

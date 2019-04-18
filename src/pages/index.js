@@ -53,7 +53,7 @@ export const query = graphql`
     }
 
     ExperienceImgs: allFile(
-      filter: { relativePath: { regex: "/experience/.*.jpg/" } }
+      filter: { relativePath: { regex: "/experience/.*.png/" } }
     ) {
       edges {
         node {
@@ -86,7 +86,7 @@ export const query = graphql`
     }
 
     ExpertiseImgs: allFile(
-      filter: { relativePath: { regex: "/expertise/.*.jpg/" } }
+      filter: { relativePath: { regex: "/expertise/.*.png/" } }
     ) {
       edges {
         node {

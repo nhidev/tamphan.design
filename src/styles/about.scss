@@ -28,6 +28,15 @@
       font-size: 0.875rem;
       line-height: 1.5rem;
       
+      .avatar {
+      //  min-width: 30%; 
+      }
+      img {
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+    }  
       @include breakpoint-small-down {
         font-size: 1rem;
       }
@@ -46,13 +55,22 @@
         text-align: center;
       }
     }
+
     .education-content {
       font-size: 0.875rem;
       line-height: 1.5rem;
+ 
+      .year {
+        min-width: 30%; 
+        text-align: center;
+      }
+
     }
+
     .experience-content {
       font-size: 0.875rem;
       line-height: 1.5rem;
+      
       .experience-wrapper {
         display: flex;
         flex-direction: row;
@@ -62,13 +80,22 @@
         padding: 4rem 0;
         .experience {
             min-width: 22%;
-            padding: 2rem;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
             .experience__image {
                 width: 100px;
                 height: 100px;
                 object-fit: contain;
             }
-            .experience__title {}
+            
+            &__details {}
+            &__year,
+            &__position {
+              color: $gray;
+            }
         }
     }
   

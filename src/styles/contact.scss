@@ -3,7 +3,7 @@
 .contact {
   color: $black;
   font-size: 1rem;
-  clip-path: polygon(0% 30%, 25% 0%, 100% 30%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 25%, 30% 0%, 100% 25%, 100% 100%, 0% 100%);
   display: flex;
   justify-content: center;
   width: 100%;
@@ -15,21 +15,33 @@
 .contact .content-grid {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
   align-items: center;
   justify-content: center;
   
   h3 {
-      margin: 1rem 0 1rem -5rem;
+    margin: 2rem 0 2rem -9rem;
+    padding-left: 0;
   }
+  
   .info {
-    padding: 1rem 2rem 0.5rem;
+    padding: 2rem;
     border: 1px solid #000;
     
-    .email {
-        margin-bottom: -1rem;
+    &__email {
+        margin-bottom: -2.5rem;
         background: #f1a426;
+        text-align: center;
+        
     }
+    &__phone{
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      img {
+        vertical-align: middle;
+        margin-right: 1rem;
+      }
+    }
+  
   }
 }
 

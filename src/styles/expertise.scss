@@ -5,7 +5,7 @@
   background: $yellow;
   -webkit-clip-path: polygon(0 0, 70% 10%, 100% 0, 100% 100%, 30% 90%, 0 100%);
   clip-path: polygon(0 0, 70% 10%, 100% 0, 100% 100%, 30% 90%, 0 100%);
-  padding: 6rem 0;
+  padding: 6rem 10rem;
   
   .expertise-wrapper {
       display: flex;
@@ -19,10 +19,10 @@
           padding: 2rem;
           text-align: center;
           .expertise__image {
-              width: 100px;
-              height: 100px;
+              width: 74px;
+              height: 72px;
               object-fit: contain;
-              margin: auto;
+              margin: 0.5rem auto;
           }
           .expertise__title {}
       }

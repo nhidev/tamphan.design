@@ -1,34 +1,34 @@
 [
     {
       "name": "Photoshop",
-      "img": "image--007.jpg"
+      "img": "ps.png"
     },
     {
       "name": "Illustrator",
-      "img": "image--008.jpg"
+      "img": "ai.png"
     },
     {
       "name": "Indesign",
-      "img": "image--009.jpg"
+      "img": "id.png"
     },
     {
       "name": "Dreamweaver",
-      "img": "image--009.jpg"
+      "img": "dw.png"
     },
     {
         "name": "Premiere",
-        "img": "image--007.jpg"
+        "img": "pr.png"
       },
       {
         "name": "XD",
-        "img": "image--008.jpg"
+        "img": "xd.png"
       },
       {
         "name": "Sketch",
-        "img": "image--009.jpg"
+        "img": "sk.png"
       },
       {
         "name": "Invision",
-        "img": "image--009.jpg"
+        "img": "in.png"
       }
   ]

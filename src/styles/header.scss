@@ -63,9 +63,9 @@ nav {
     &.download {
       padding: 0.25rem;
       a{
-        color: $text-color;
+        color: $white;
         padding: 5px 10px;
-        border: 3px solid $border-color;
+        border: 3px solid $white;
       }
     }  
       &:hover {
