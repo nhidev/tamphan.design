@@ -21,7 +21,7 @@ class Projects extends Component {
               return (
                 <div className="project" key={project.name}>
 
-                  <div className='project__image'>
+                  <div className='project-image'>
                     <Img
                       title={project.name}
                       alt="Screenshot of Project"
@@ -29,11 +29,15 @@ class Projects extends Component {
                       className="card-img_src center-block"
                     />
                   </div>
-                  <div className='project__details'>
-                    <div className='project__title'>
+                  <div className='project-details'>
+                    <div className='project-title'>
                       {project.name}
                     </div>
-                    <div className='project__link'>
+                    <div className='project-info'>
+                    <div className='project-system'>
+                      {project.system}
+                    </div>
+                    <div className='project-link'>
                       <a
                         href={project.url}
                         key={project.url}
@@ -41,7 +45,8 @@ class Projects extends Component {
                         rel="noopener noreferrer"
                       >{project.url}</a>
                     </div>
-                    <div className='project__desc'>
+</div>
+                    <div className='project-desc'>
                       {project.description}
                     </div>
                   </div>

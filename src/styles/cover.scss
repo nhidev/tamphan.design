@@ -15,13 +15,16 @@
   flex: 0 1 auto;
   flex-direction: column;
   justify-content: center;
-
+  @include breakpoint-small-down {
+    clip-path: polygon(0 0, 100% 0%, 100% 0, 100% 90%, 70% 100%, 0 90%);
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 0, 100% 90%, 70% 100%, 0 90%);
+  }
   main {
     display: flex;
     flex: 1 0 auto;
     flex-direction: column;
     justify-content: center;
-    padding: 3.25rem 1.5rem 1rem;
+    padding: 0;
     text-align: center;
 
     @include breakpoint-small-down {
@@ -31,28 +34,106 @@
     .intro-wrapper {
       flex: auto;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
       text-align: left;
-      > .intro-heading {
+      flex-wrap: wrap;
+
+      .intro-heading {
         position: relative;
-        svg {
-          height: 70px;
-          width: 130px;
-          &:nth-child(2){
-            height: 50px;
-            vertical-align: top;
+        
+        span:first-child {
+          position: absolute;
+          top: -20px;
+          left: 100px;
+          transform: rotate(35deg);
+        }
+
+        img {
+          position: absolute;
+          top: -15px;
+        }
+
+        .tagline {
+          font-size: 2.5rem;
+          margin: 1.5rem 0;
+          font-weight: bold;
+  
+          @include breakpoint-small-down {
+            font-size: 1.25rem;
           }
         }
+
       }
 
-      > .tagline {
-        font-size: 1.255rem;
-        margin: 1.5rem 0;
-        font-weight: 300;
+ 
+      .business-card {
+        color: $gray;
+        font-size: 0.75rem;
+        background-image: url('./../images/ux.png'), url('./../images/mobile_bg.jpg');
+        background-size: 55%, contain;
+        background-position: right 30% bottom 25%, center top;
+        background-repeat: no-repeat;
 
-        @include breakpoint-small-down {
-          font-size: 1.25rem;
+        height: 550px;
+        min-width: 320px;
+        position: relative;
+
+        .base-info {
+          position: absolute;
+          top: 20%;
+          left: 22%;
+          .welcome span {
+            display: block;
+            text-transform: uppercase;
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+          }
+          .name,
+          .birth {
+            border-bottom: 1px solid;
+            line-height: 1rem;
+            margin: 0.5rem 0;
+          }
+          .name {
+            background: transparent url('./../images/icon.png') left center no-repeat;
+            background-size: 0.7rem;
+            padding-left: 1.5rem;
+          }
+          .birth {
+            background: transparent url('./../images/cake.png') left center no-repeat;
+            background-size: 0.7rem;
+            padding-left: 1.5rem;
+          }
+          .view-more {
+            border-radius: 1rem;
+            background: $green;
+            color: $white;
+            display: block;
+            text-align: center;
+            width: 6rem;
+            height: 2rem;
+            line-height: 2rem;
+            margin: 1.5rem auto;
+          }
+        }
+        .contact-me {
+          border-top: 1px solid;
+          position: absolute;
+          bottom: 15%;
+          left: 22%;
+          line-height: 1.25rem;
+          display: flex;
+          font-size: 0.55rem;
+          flex-direction: row;
+          justify-content: space-between;
+          .phone {
+            background: transparent url('./../images/phone_green.png') left center no-repeat;
+            background-size: 1rem;
+            padding: 0 0.5rem 0 1.5rem;
+     
+          }
         }
       }
     }

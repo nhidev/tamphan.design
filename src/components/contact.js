@@ -10,7 +10,6 @@ const Footer = () => {
       <div className="info">
           <p className="info__phone"><img src={phoneIcon} alt="lgo" style={{ width: "38px" }} /> 0933 532 059</p>
           <p className="info__email">ptntam@gmail.com</p>
-
       </div>
     </div>
   </div>

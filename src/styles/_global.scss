@@ -103,17 +103,11 @@ h1 {
 
 	.flex-box {
 		display: flex;
-      flex-direction: row;
-			flex-wrap: wrap;
-			p:last-child {
-				flex: 2 0 0;
-		 }
-		 p:first-child {
-				flex: 1 0 0;
-				text-align: center;
-		 }
+		flex-direction: row;
+		flex-wrap: wrap;
 					 
 	}
+
 	@include breakpoint-medium-up {
 		width: calc(100% - 5rem);
 	}

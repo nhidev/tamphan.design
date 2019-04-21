@@ -38,5 +38,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/nhidev/gatsby-portfolio.git"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1"
   }
 }

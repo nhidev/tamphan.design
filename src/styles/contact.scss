@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 500px;
+  height: 50vh;
   background: $gold;
   z-index: 0;
 }
@@ -46,6 +46,10 @@
 }
 
 @media only screen and (max-width: 649px) {
+  .contact {
+    clip-path: polygon(0% 10%, 30% 0%, 100% 10%, 100% 100%, 0% 100%)
+  }
+  
   .contact .content-grid {
     flex-direction: column;
   }

@@ -6,29 +6,34 @@
   -webkit-clip-path: polygon(0 0, 70% 10%, 100% 0, 100% 100%, 30% 90%, 0 100%);
   clip-path: polygon(0 0, 70% 10%, 100% 0, 100% 100%, 30% 90%, 0 100%);
   padding: 6rem 10rem;
-  
+
+  .content-grid h3 {
+    margin-bottom: 3rem;
+  }
+
   .expertise-wrapper {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: center;
-      padding: 4rem 0;
-      .expertise {
-          min-width: 22%;
-          padding: 2rem;
-          text-align: center;
-          .expertise__image {
-              width: 74px;
-              height: 72px;
-              object-fit: contain;
-              margin: 0.5rem auto;
-          }
-          .expertise__title {}
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .expertise {
+      flex: 1 0 21%;
+      font-size: 0.875rem;
+      font-weight: 300;
+      line-height: 1.5rem;
+      text-align: center;
+      .expertise__image {
+        width: 74px;
+        height: 72px;
+        object-fit: contain;
+        margin: 0.5rem auto;
       }
+    }
   }
   @include breakpoint-small-down {
     clip-path: polygon(0 0, 70% 2%, 100% 0, 100% 100%, 30% 98%, 0 100%);
-  }
+    padding: 3rem;
 
+  }
 }
