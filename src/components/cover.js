@@ -12,7 +12,7 @@ const Cover = () => {
           <div className="intro-heading">
             <span>I'm </span>
             <span className="tagline">UI / UX</span>
-            <img src={lion} alt="avatar" style={{ width: '30px' }} /> designer
+            <img src={lion} alt="avatar" /> designer
           </div>
           <div className="business-card">
             <div className="base-info">
