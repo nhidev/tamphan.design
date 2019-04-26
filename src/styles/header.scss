@@ -1,76 +1,108 @@
 @import 'breakpoints';
 @import 'variables';
 
+@keyframes Dance {
+  20% {
+    transform: scaleX(1.2);
+  }
+  40% {
+    transform: scaleX(0.8);
+  }
+  60% {
+    transform: scaleX(1.3);
+  }
+  80% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0.3);
+  }
+}
+
+.logo {
+  margin-left: 40px;
+}
+
+.toggle {
+  position: absolute;
+  color: $white;
+  border-bottom: 2px solid currentcolor;
+  left: 0;
+  transition: all 1s;
+  width: 30px;
+  height: 32px;
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+  }
+
+  &::after {
+    bottom: 9px;
+    border-bottom: 2px solid currentcolor;
+  }
+
+  &::before {
+    bottom: 20px;
+    border-bottom: 2px solid currentcolor;
+  }
+}
+
+.burger-open {
+  transform: rotate(90deg) translate(5px, 0);
+  width: 30px;
+
+  &::after {
+    transform-origin: 100%;
+    animation: Dance 1.5s linear alternate infinite;
+  }
+  
+  &::before {
+    transform-origin: 100%;
+    animation: Dance 1.5s -0.5s linear alternate infinite;
+  }
+
+  ~ .menu {
+    display: block;
+  }
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  transition: all ease-in-out .6s;
+  &__item {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 400;
+    border-bottom: 2px solid transparent;
+    &.download a {
+      color: $white;
+      padding: 5px 10px;
+      border: 2px solid $white;
+    }
+    
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
 nav {
   width: 100%;
   height: 3rem;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  position: relative;
   z-index: 999;
 
   @include breakpoint-small-down {
     height: 4rem;
   }
 
-  .magic-wand {
-    cursor: pointer;
-    justify-self: flex-start;
-    margin-left: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .magic-text {
-      text-align: center;
-      font-size: 0.5rem;
-      padding-top: 0.25rem;
-    }
-
-    &.bounce-xy {
-      animation: bounce-xy 2s infinite;
-    }
-
-    @keyframes bounce-xy {
-      0%,
-      20%,
-      50%,
-      80%,
-      100% {
-        transform: translateY(0) translateX(0);
-      }
-      40% {
-        transform: translateY(2px) translateX(2px);
-      }
-      60% {
-        transform: translateY(1px) translateX(1px);
-      }
-    }
-  }
-  
-  .menu {
-    margin-right: 1rem;
-    display: flex;
-    flex: 1;
-    justify-content: flex-end;
-
-    &__item {
-      padding: 0.25rem 0;
-      margin: 0 1rem;
-      font-size: 1rem;
-      font-weight: 400;
-      border-bottom: 2px solid transparent;
-    &.download {
-      padding: 0.25rem;
-      a{
-        color: $white;
-        padding: 5px 10px;
-        border: 2px solid $white;
-      }
-    }  
-      &:hover {
-        cursor: pointer;
-      }
-    }
-  }
 }

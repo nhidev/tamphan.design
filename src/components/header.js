@@ -7,19 +7,26 @@ import logo from "../images/logo.png";
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.handleScroll = this.handleScroll.bind(this);
     this.state = {
-      isSticky: false
+      isSticky: false,
+      isOpen: false,
     };
+    this.handleScroll = this.handleScroll.bind(this);
+    this.toggle = this.toggle.bind(this);
   }
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
+  toggle() {
+    this.setState(state => ({
+      isOpen: !state.isOpen,
+    }));
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+  handleClickOutside() {
+    this.setState({
+      isOpen: false,
+    });
   }
+
 
   handleScroll() {
     if (window.pageYOffset > this.nav.offsetTop) {
@@ -38,20 +45,30 @@ class Header extends Component {
     scrollToElement(nextPage);
   }
 
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
   render() {
+    const { isOpen } = this.state;
     const stickyClass = this.state.isSticky ? 'sticky' : '';
     return (
       <div className="content-grid">
-      <nav
-        className={stickyClass}
+      <nav className={stickyClass}
         ref={(elem) => {
           this.nav = elem;
         }}
       >
-      <Link to="/" className="navbar-item" title="Logo">
+      <Link to="/" className="logo" title="Logo">
               <img src={logo} alt="lgo" style={{ width: "150px" }} />
             </Link>
-        <div className="menu">
+        <div className={`toggle burger${isOpen? '-open': ''}`}  onClick={this.toggle}></div>
+    
+        <div className="menu" onClick={this.toggle}>
           <div
             className="menu__item active"
             onClick={(e) => this.scrollToPage('.about-page')}
