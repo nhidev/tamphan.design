@@ -33,18 +33,23 @@
     .about-content {
       font-size: 0.875rem;
       line-height: 1.5rem;
-
+      align-items: center;
       img {
         border-radius: 50%;
         object-fit: cover;
         padding: 0 2rem;
-        min-width: 120px;
+        max-width: 300px;
       }
       @include breakpoint-small-down {
         font-size: 1rem;
         display: block;
         p {
           width: 100%;
+        }
+        img {
+          object-fit: cover;
+          padding: 0;
+          max-width: 250px;
         }
       }
 
