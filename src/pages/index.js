@@ -7,7 +7,7 @@ import ScrollTop from "../components/scroll-top";
 import Contact from "../components/contact";
 import Footer from "../components/footer";
 import { Helmet } from "react-helmet";
-import favicon from "../images/favicon.ico";
+import favicon from "../images/favicon.png";
 
 import "../styles/main.scss";
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -26,11 +26,24 @@ const IndexPage = ({ data }) => {
   
   return (
     <div className="dev-landing-page">
-      <Helmet>
-        <title>{siteTitle}</title>
-        <meta name="description" content={metaDescr} />
-        <link rel="icon" type="/image/png" href={favicon} />
-      </Helmet>
+      <Helmet
+      title={siteTitle}
+      meta={[
+        {
+          name: "description",
+          content: {metaDescr},
+        },
+        {
+          name: "keywords",
+          content: "designer, UI/UX",
+        },
+      ]}
+      link={[
+        { rel: "icon", type: "image/png", sizes: "16x16", href: `${favicon}` },
+        { rel: "icon", type: "image/png", sizes: "32x32", href: `${favicon}` },
+        { rel: "shortcut icon", type: "image/png", href: `${favicon}` },
+      ]}
+    />
       <Cover />
       <AboutMe experienceImgs={experienceImgData}  />
       <Expertise expertiseImgs={expertiseImgData} />

@@ -2,10 +2,9 @@ module.exports = {
   siteMetadata: {
     title: 'TamPhan Designer',
     description:
-    "Enjoying a good coding challenge, creating digital magic and elevate user experience to the next level.",
+    "I love everything about graphic design, user interface and user experience.",
   siteUrl: "https://nhidev.netlify.com",
   author: "nhidev"
-
   },
   plugins: [
     'gatsby-plugin-sass',
