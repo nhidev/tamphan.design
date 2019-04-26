@@ -39,6 +39,7 @@
       justify-content: space-around;
       text-align: left;
       flex-wrap: wrap;
+      max-width: 50rem;
 
       .intro-heading {
         position: relative;
@@ -82,13 +83,13 @@
         color: $gray;
         font-size: 0.75rem;
         background-image: url('./../images/ux.png'),
-          url('./../images/mobile_bg.jpg');
+          url('./../images/mobile_bg.png');
         background-size: 55%, contain;
-        background-position: right 30% bottom 25%, center top;
+        background-position: right 30% bottom 20%, center top;
         background-repeat: no-repeat;
-
-        height: 550px;
-        min-width: 320px;
+        filter: drop-shadow(5px 5px 10px #076aa3b5);
+        height: 500px;
+        min-width: 350px;
         position: relative;
 
         .base-info {
@@ -134,7 +135,7 @@
         .contact-me {
           border-top: 1px solid;
           position: absolute;
-          bottom: 15%;
+          bottom: 10%;
           left: 22%;
           line-height: 1.25rem;
           display: flex;
@@ -151,7 +152,7 @@
         
         @include breakpoint-small-down {
           height: 400px;
-          min-width: 230px; 
+          min-width: 250px; 
         }
       }
       
