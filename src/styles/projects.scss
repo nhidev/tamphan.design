@@ -9,10 +9,6 @@
 	flex-direction: column;
   justify-content: center;
   
-  // @include breakpoint-small-down {
-  //   padding-top: 3rem;
-  // }
-
   .content-grid h3 {
     margin-bottom: 3rem;
   }
@@ -25,15 +21,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
-    // @include breakpoint-small-down {
-    //   flex-direction: column;
-    //   align-items: center;
-    // }
   }
 }
 
 .project {
+  font-size: 0.8rem;
+  font-weight: 300;
   width: 100%;
   margin-bottom: 1rem;  
   display: flex;
@@ -59,36 +52,19 @@
   }
 
   .project-details {
-    font-size: 0.875rem;
-    font-weight: 300;
     line-height: 1.5rem;
     padding: 1rem 1.5rem;
     width: 60%;
   }
-  
-  @include breakpoint-small-down {
-    display: block;
-    .project-image,
-    .project-details {
-      width: 100%;
-    }
-  }
+    
   .project-title {
     margin-bottom: 1rem;
-
-    // @include breakpoint-small-down {
-    //   font-size: 1.25rem;
-    // }
   }
 
   .project-desc {
     text-align: left;
     line-height: 1.25rem;
     white-space: pre-line;
-
-    // @include breakpoint-small-down {
-    //   font-size: 0.875rem;
-    // }
   }
 
   .project-info {
@@ -122,4 +98,14 @@
       }
     }
   }
+
+  @include breakpoint-small-down {
+    font-size: 1rem;
+    display: block;
+    .project-image,
+    .project-details {
+      width: 100%;
+    }
+  }
+
 }

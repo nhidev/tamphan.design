@@ -29,28 +29,16 @@
   }
 
   .about-wrapper {
-
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    
     .about-content {
-      font-size: 0.875rem;
-      line-height: 1.5rem;
       align-items: center;
       img {
         border-radius: 50%;
         object-fit: cover;
         padding: 0 2rem;
         max-width: 300px;
-      }
-      @include breakpoint-small-down {
-        font-size: 1rem;
-        display: block;
-        p {
-          width: 100%;
-        }
-        img {
-          object-fit: cover;
-          padding: 0;
-          max-width: 250px;
-        }
       }
 
       p {
@@ -60,18 +48,9 @@
       .highlight {
         font-weight: bold;
       }
-      .text-emoji {
-        padding: 2rem 0;
-        font-size: 1.5rem;
-        font-weight: 300;
-        text-align: center;
-      }
     }
 
     .education-content {
-      font-size: 0.875rem;
-      line-height: 1.5rem;
-
       .year {
         min-width: 30%;
         text-align: center;
@@ -79,8 +58,6 @@
     }
 
     .experience-content {
-      font-size: 0.875rem;
-      line-height: 1.5rem;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -114,6 +91,22 @@
         }
       }
     }
-    
+  
+    @include breakpoint-small-down {
+      font-size: 1rem;
+      display: block;
+      
+      .about-content {
+        p {
+          width: 100%;
+        }
+        img {
+          object-fit: cover;
+          padding: 0;
+          max-width: 250px;
+        }
+      }
+    }
+
   }
 }

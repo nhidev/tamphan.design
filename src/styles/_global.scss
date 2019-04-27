@@ -9,7 +9,8 @@
   font-style: normal;
   font-weight: 100;
 	src: local('Roboto Thin'), local('Roboto-Thin'),
-	url('../libs/fonts/roboto-100.woff2') format('woff2');
+	url('../libs/fonts/Roboto-Thin.woff2') format('woff2');
+	unicode-range: U+0102-0103, U+1EA0-1EF1, U+20AB;
 }
 
 @font-face {
@@ -17,7 +18,8 @@
   font-style: normal;
   font-weight: 300;
 	src: local('Roboto Light'), local('Roboto-Light'),
-	url('../libs/fonts/roboto-300.woff2') format('woff2');
+	url('../libs/fonts/Roboto-Light.woff2') format('woff2');
+	unicode-range: U+0102-0103, U+1EA0-1EF1, U+20AB;
 }
 
 @font-face {
@@ -25,15 +27,27 @@
   font-style: normal;
   font-weight: 400;
 	src: local('Roboto'), local('Roboto-Regular'),
-	url('../libs/fonts/roboto-400.woff2') format('woff2');
+	url('../libs/fonts/Roboto-Regular.woff2') format('woff2');
+	unicode-range: U+0102-0103, U+1EA0-1EF1, U+20AB;
 }
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+	src: local('Roboto'), local('Roboto-Medium'),
+	url('../libs/fonts/Roboto-Medium.woff2') format('woff2');
+	unicode-range: U+0102-0103, U+1EA0-1EF1, U+20AB;
+}
+
 
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 900;
 	src: local('Roboto Black'), local('Roboto-Black'),
-	url('../libs/fonts/roboto-900.woff2') format('woff2');
+	url('../libs/fonts/Roboto-Bold.woff2') format('woff2');
+	unicode-range: U+0102-0103, U+1EA0-1EF1, U+20AB;
 }
 
 /* reem-kufi-regular - latin */
@@ -67,8 +81,11 @@ html {
 }
 
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
-	font-family: "Baksheesh Regular",sans-serif;
-	font-weight: 300;
+	color: $text-color;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
 }
 
 h1 {
@@ -90,7 +107,7 @@ h1 {
 				position: absolute;
 				width: 40px;
 				height: 1px;
-				background: black;
+				background: $black;
 				bottom: 0;
 				left: 0;
 			}
